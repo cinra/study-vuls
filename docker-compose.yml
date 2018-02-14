@@ -1,0 +1,11 @@
+version: '2'
+services:
+  vuls:
+    build: .
+    container_name: vuls
+    working_dir: /vuls
+    volumes:
+      - .:/vuls
+      - ./log:/var/log/vuls
+    ports:
+      - 80:80
